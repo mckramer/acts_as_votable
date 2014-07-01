@@ -15,3 +15,8 @@ else
 end
 
 gem 'rails', rails
+
+protected_attributes_version = ENV['PROTECTED_ATTRIBUTES_VERSION']
+if protected_attributes_version
+  gem 'protected_attributes', "~> #{protected_attributes_version}"
+end
