@@ -1,5 +1,10 @@
 require 'acts_as_votable/helpers/words'
 
+begin
+  require 'protected_attributes'
+rescue LoadError
+end
+
 module ActsAsVotable
   class Vote < ::ActiveRecord::Base
 
